@@ -4,9 +4,13 @@ This codebook describes the proces followed in this project and programmed in (r
 ## Introduction
 
 1.- All the similar data is merged using the rbind() function. By similar, we address those files having the same number of columns and referring to the same entities.
+
 2.- Only those columns with the mean and standard deviation measures are taken from the whole dataset. After extracting these columns, they are given the correct names, taken from features.txt.
+
 3.- As activity data is addressed with values 1:6, we take the activity names and IDs from activity_labels.txt and they are substituted in the dataset.
+
 4.- On the whole dataset, those columns with vague column names are corrected.
+
 5.- We generate a new dataset with all the average measures for each subject and activity type (30 subjects * 6 activities = 180 rows). 
 
 The output file is called averages_data.txt, and uploaded to this repository.
