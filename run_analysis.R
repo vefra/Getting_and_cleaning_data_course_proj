@@ -1,6 +1,6 @@
 ################################################
 ### elab date: 20/03/2017
-### Name: Verónica Vaca
+### Name: VerÃ³nica Vaca
 ### Project Getting and Cleanning Data
 ################################################
 
@@ -9,6 +9,22 @@ library(plyr)
 # Step 1
 # Merge the training and test sets to create one data set
 ###############################################################################
+
+file_url <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+file_name <-"Dataset.zip" 
+
+# Downloading the file if not exists already
+
+if (!file.exists(file_name)){
+        download.file(file_url, destfile = "./Dataset.zip", method = "curl")
+}
+
+#unzip the zip file
+
+if (!file.exists("./Dataset")) { 
+        unzip(file_name) 
+}
+
 
 ## 1.1  Reading the Data
 
